@@ -26,9 +26,10 @@ LOCAL_MODULE := libz
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -O3 -DUSE_MMAP
 LOCAL_SRC_FILES := $(zlib_files)
-ifeq ($(TARGET_ARCH),arm)
-  LOCAL_SDK_VERSION := 9
-endif
+#ifeq ($(TARGET_ARCH),arm)
+  #LOCAL_SDK_VERSION := 9
+#endif
+LOCAL_C_INCLUDES += $(TARGET_C_INCLUDES)
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -38,9 +39,10 @@ LOCAL_MODULE := libz
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -O3 -DUSE_MMAP
 LOCAL_SRC_FILES := $(zlib_files)
-ifeq ($(TARGET_ARCH),arm)
-  LOCAL_SDK_VERSION := 9
-endif
+#ifeq ($(TARGET_ARCH),arm)
+  #LOCAL_SDK_VERSION := 9
+#endif
+LOCAL_C_INCLUDES += $(TARGET_C_INCLUDES)
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -81,9 +83,10 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(zlib_files)
 LOCAL_MODULE:= libunz
 LOCAL_ARM_MODE := arm
-ifeq ($(TARGET_ARCH),arm)
-  LOCAL_SDK_VERSION := 9
-endif
+#ifeq ($(TARGET_ARCH),arm)
+  #LOCAL_SDK_VERSION := 9
+#endif
+LOCAL_C_INCLUDES += $(TARGET_C_INCLUDES)
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
